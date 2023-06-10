@@ -1,0 +1,21 @@
+{% extends "homeapp/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Enregistez-vous</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form">
+                <button class="btn btn-outline-info" type="submit">S'enregistrer</button>
+            </div>
+        </form>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                Avez-vous deja un compte? <a class="ml-2" href="{% url 'login' %}">Connectez-vous</a>
+            </small>
+        </div>
+    </div>
+{% endblock content %}
