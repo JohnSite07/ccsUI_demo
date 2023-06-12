@@ -9,7 +9,6 @@ list_vues = ['dummy_employe', "#"]
 def list_tuple(list):
     tuple_list = [] 
     for ele in list_vues:
-        index = list_vues.index(ele) + 1
         tuple = (ele, ele)
         tuple_list.append(tuple)
     return tuple_list
