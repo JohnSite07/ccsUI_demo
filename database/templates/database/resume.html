@@ -1,4 +1,13 @@
 {% extends "homeapp/base.html" %}
+{% load static %}
 {% block content %}
     <h1>RESUME</h1>
+<div>
+    <a href="{% url 'request_data' %}">
+        <div>
+            <img src="{% static 'images/table-icon-21.png' %}" width="150em" height="150em">
+            <h3>Selectionnez des données a observer à</h3>
+        </div>
+    </a>
+</div>
 {% endblock content %}
