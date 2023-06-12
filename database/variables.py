@@ -4,6 +4,16 @@ user = "postgres"
 password = "postgresccs3"
 post = "5432"
 
+list_vues = ['dummy_employe', "#"]
+
+def list_tuple(list):
+    tuple_list = [] 
+    for ele in list_vues:
+        index = list_vues.index(ele) + 1
+        tuple = (ele, ele)
+        tuple_list.append(tuple)
+    return tuple_list
+
 def select(table_name, conn):
     import pandas as pd
     df = pd.read_sql(f"SELECT * FROM {table_name}", conn)
