@@ -1,0 +1,15 @@
+{% extends "homeapp/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Détail de données</legend>
+            {{ dq_form|crispy }}
+        </fieldset>
+        <div class="form">
+            <button class="btn btn-outline-info" type="submit">Confirmer</button>
+        </div>
+    </form>
+</div>
+{% endblock content %}
