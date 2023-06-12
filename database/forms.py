@@ -1,4 +1,5 @@
 from django import forms
+from .variables import *
 
 class DataQueryForm(forms.Form):
-    tableau = forms.CharField(max_length=100)
+    tableau = forms.ChoiceField(choices=list_tuple(list_vues))
