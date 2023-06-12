@@ -87,3 +87,10 @@ table {
 #table_view {
   margin: auto;
 }
+
+#img_resum {
+  width:"150em";
+  height:"150em";
+  float: left;
+  margin-right: 10px;
+}
