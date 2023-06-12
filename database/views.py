@@ -31,4 +31,6 @@ def dataquery(request):
     context = {
         "dq_form": dq_form
     }
+    conn.close
+
     return render(request, "database/request_data.html", context)
