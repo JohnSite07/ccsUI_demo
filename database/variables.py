@@ -6,7 +6,11 @@ user = "postgres"
 password = "postgresccs3"
 post = "5432"
 
-list_vues = ['dummy_employe', "#"]
+data_dic = {
+    'exemple_personnels': exemple_personnels
+}
+
+list_vues = data_dic.keys()
 
 def list_tuple(list):
     tuple_list = [] 
@@ -20,6 +24,3 @@ def select(table_name, conn):
     df = pd.read_sql(f"SELECT * FROM {table_name}", conn)
     return df
 
-data_dic = {
-    'exemple_personnels': exemple_personnels
-}
