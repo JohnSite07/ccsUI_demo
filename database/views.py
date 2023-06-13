@@ -1,3 +1,4 @@
+import pandas as pd
 from django.shortcuts import render
 from .forms import DataQueryForm
 from .variables import *
@@ -19,7 +20,9 @@ def dataquery(request):
         dq_form = DataQueryForm(request.POST)
         if dq_form.is_valid():
             tableau = dq_form.cleaned_data['tableau']
-            table = select(tableau, conn).to_html(index=False,
+            data = data_dic[tableau].objects.all()
+            df = pd.DataFrame(list(data.values()))
+            table =  df.to_html(index=False,
                                 classes=[
                                     "table table-secondary table-hover",
                                     ]
