@@ -7,14 +7,6 @@ def resume(request):
     return render(request, 'database/resume.html')
 
 def dataquery(request):
-    import psycopg2 as psyco
-
-    conn = psyco.connect(
-        host = host,
-        database = database,
-        user = user,
-        password = password
-    )
 
     if request.method == 'POST':
         dq_form = DataQueryForm(request.POST)
@@ -34,6 +26,5 @@ def dataquery(request):
     context = {
         "dq_form": dq_form
     }
-    conn.close
 
     return render(request, "database/request_data.html", context)
