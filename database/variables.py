@@ -1,3 +1,5 @@
+from .models import *
+
 host = "ccs-test-database.caoqx3t4fux5.eu-west-1.rds.amazonaws.com"
 database = "ccsdbtest"
 user = "postgres"
@@ -17,3 +19,7 @@ def select(table_name, conn):
     import pandas as pd
     df = pd.read_sql(f"SELECT * FROM {table_name}", conn)
     return df
+
+data_dic = {
+    'exemple_personnels': exemple_personnels
+}
