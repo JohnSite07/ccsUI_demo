@@ -1,6 +1,6 @@
 asgiref==3.6.0
 crispy-bootstrap5==0.7
-Django==4.2.1
+Django==4.2.14
 django-crispy-forms==2.0
 numpy==1.24.3
 pandas==2.0.1
